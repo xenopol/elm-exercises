@@ -72,4 +72,4 @@ append xs ys =
 
 concat : List (List a) -> List a
 concat list =
-    foldl append [] list
+    foldr append [] list

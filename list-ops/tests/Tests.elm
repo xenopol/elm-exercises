@@ -75,12 +75,12 @@ tests =
                 test "non-empty lists" <|
                     \() -> Expect.equal (List.range 1 8) (ListOps.append (List.range 1 4) (List.range 5 8))
             ]
-        -- , describe "concat"
-        --     [
-        --         test "empty list" <|
-        --             \() -> Expect.equal [] (ListOps.concat [])
-        --     ,
-        --         test "list of lists" <|
-        --             \() -> Expect.equal (List.range 1 10) (ListOps.concat [ List.range 1 3, [], List.range 4 7, List.range 8 10 ])
-        --     ]
+        , describe "concat"
+            [
+                test "empty list" <|
+                    \() -> Expect.equal [] (ListOps.concat [])
+            ,
+                test "list of lists" <|
+                    \() -> Expect.equal (List.range 1 10) (ListOps.concat [ List.range 1 3, [], List.range 4 7, List.range 8 10 ])
+            ]
         ]
